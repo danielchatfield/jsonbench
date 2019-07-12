@@ -1,0 +1,17 @@
+//go:generate go run ./gen/main.go
+package jsonbench
+
+type Foo struct {
+{{- range $val := Fields }}
+    {{ $val }} string
+{{- end }}
+}
+
+
+func NewFoo() Foo {
+	return Foo{
+{{- range $val := Fields }}
+    {{ $val }}: "foo",
+{{- end }}
+	}
+}

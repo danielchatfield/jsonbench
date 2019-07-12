@@ -10,7 +10,7 @@ import (
 	"text/template"
 )
 
-const NumFields = 1000
+const NumFields = 10000
 
 func main() {
 	templatePath := path.Join(".", "gen", "jsonbench.go.tmpl")
